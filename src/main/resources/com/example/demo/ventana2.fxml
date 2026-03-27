@@ -3,9 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: https://ca.pinterest.com/pin/ishowspeed-short-meme--560979697356129717/;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SegundavistaController">
    <children>
-      <Label text="SEGUNDA VENTANA" />
+      <Button layoutX="423.0" layoutY="188.0" mnemonicParsing="false" onAction="#depositar" prefHeight="83.0" prefWidth="154.0" text="Depositar" />
+      <Button layoutX="231.0" layoutY="188.0" mnemonicParsing="false" onAction="#retirar" prefHeight="83.0" prefWidth="154.0" text="Retirar" />
+      <Button layoutX="50.0" layoutY="188.0" mnemonicParsing="false" onAction="#consultar" prefHeight="83.0" prefWidth="154.0" text="Consultar" />
    </children>
 </AnchorPane>
