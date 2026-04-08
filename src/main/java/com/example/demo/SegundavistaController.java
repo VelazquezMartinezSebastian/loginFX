@@ -1,50 +1,51 @@
 package com.example.demo;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class SegundavistaController {
 
-    @FXML
-    private TextField monto;
 
-    @FXML
-    private Label resultado;
 
-    private double saldo = 0;
-
-    @FXML
-    public void depositar() {
-        try {
-            double m = Double.parseDouble(monto.getText());
-            saldo += m;
-            resultado.setText("Depositado: " + m);
-        } catch (Exception e) {
-            resultado.setText("Ingresa un número válido");
+        @FXML
+        public void abrirDepositar() {
+            abrirVentana("Depositar.fxml", "Depositar");
         }
-    }
 
-    @FXML
-    public void retirar() {
-        try {
-            double m = Double.parseDouble(monto.getText());
+        @FXML
+        public void abrirRetirar() {
+            abrirVentana("retirar.fxml", "Retirar");
+        }
 
-            if (m <= saldo) {
-                saldo -= m;
-                resultado.setText("Retiro exitoso: " + m);
-            } else {
-                resultado.setText("Saldo insuficiente");
+        @FXML
+        public void abrirConsultar() {
+            abrirVentana("consultar.fxml", "Consultar");
+        }
+
+
+        private void abrirVentana(String archivoFXML, String titulo) {
+            try {
+                FXMLLoader loader = new FXMLLoader(
+                        getClass().getResource("/com/example/demo/" + archivoFXML)
+                );
+
+                Parent root = loader.load();
+
+                Stage stage = new Stage();
+                stage.setTitle(titulo);
+                stage.setScene(new Scene(root));
+                stage.show();
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-        } catch (Exception e) {
-            resultado.setText("Ingresa un número válido");
         }
     }
 
-    @FXML
-    public void consultar() {
-        resultado.setText("Saldo actual: " + saldo);
-    }
-}
-//tqm
+
+

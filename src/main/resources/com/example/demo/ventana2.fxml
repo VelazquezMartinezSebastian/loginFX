@@ -3,10 +3,10 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-image: https://ca.pinterest.com/pin/ishowspeed-short-meme--560979697356129717/;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.SegundavistaController">
-   <children>
-      <Button layoutX="423.0" layoutY="188.0" mnemonicParsing="false" onAction="#depositar" prefHeight="83.0" prefWidth="154.0" text="Depositar" />
-      <Button layoutX="231.0" layoutY="188.0" mnemonicParsing="false" onAction="#retirar" prefHeight="83.0" prefWidth="154.0" text="Retirar" />
-      <Button layoutX="50.0" layoutY="188.0" mnemonicParsing="false" onAction="#consultar" prefHeight="83.0" prefWidth="154.0" text="Consultar" />
-   </children>
-</AnchorPane>
+<VBox alignment="CENTER" spacing="10" stylesheets="@ventana2.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.demo.SegundavistaController">
+
+   <Button onAction="#abrirDepositar" text="Depositar" />
+   <Button onAction="#abrirRetirar" text="Retirar" />
+   <Button onAction="#abrirConsultar" text="Consultar" />
+
+</VBox>

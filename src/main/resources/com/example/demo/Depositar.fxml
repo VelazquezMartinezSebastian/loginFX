@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
 
+<VBox alignment="CENTER" spacing="10" stylesheets="@depositar.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.demo.DepositarController">
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DepositarController">
-   <children>
-      <Circle fill="DODGERBLUE" layoutX="78.0" layoutY="127.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-   </children>
-</AnchorPane>
+   <Label text="Monto a depositar" />
+   <TextField fx:id="monto" promptText="Ingrese monto" />
+
+   <Button onAction="#depositar" text="Depositar" />
+
+   <Label fx:id="resultado" />
+
+</VBox>
